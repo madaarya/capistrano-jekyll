@@ -4,7 +4,7 @@ namespace :jekyll do
   task :build do
     on roles(:web) do
       within release_path do
-        execute :jekyll, 'build'
+        execute '/home/gmtpos/.rvm/gems/ruby-2.5.1/bin/jekyll', 'build --destination public'
       end
     end
   end
